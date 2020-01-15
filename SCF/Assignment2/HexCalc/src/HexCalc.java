@@ -1,170 +1,17 @@
-import java.util.Scanner;
 /*
  * @author ${kunal kaushik}
+ * desc : This class can implement addition,subtraction,multiplication and division of hexaDecimal numbers
+ * Also includes functions to change hexaDecimal to Decimal and vice-versa
  * 
  */
 public class HexCalc {
-	
-	private static Scanner sc=new Scanner(System.in);
-	public static void main(String argv[]) 
-	{
-		int option;
-		
-		
-		while(true)
-		{
-			
-			HexCalc.Choose_option();
-		try
-		{
-			option = Integer.parseInt(sc.nextLine());
-		}	
-		catch(NumberFormatException e) // IF input is not a number
-		{
-			System.out.println("Wrong Input");
-			System.out.println("Please enter your option again : ");
-			option = Integer.parseInt(sc.nextLine());
-		}
-			switch(option)
-			{
-			
-				case 1: // Add 2 hexa no.
-					{
-						System.out.println("Enter the First number : ");
-						String First = sc.nextLine();
-						
-						System.out.println("Enter the Second number : ");
-						
-						String Second = sc.nextLine();
-						System.out.println(HexCalc.checkVaildString(First) +""+HexCalc.checkVaildString(Second));
-						if(HexCalc.checkVaildString(First) && HexCalc.checkVaildString(Second))
-						System.out.println("Addition is : "+HexCalc.Add(First,Second));
-						else
-							System.out.println("Wrong Input..\n");
-						break;
-					}
-				case 2: // Subtract 2 hexa no.
-					{
-						System.out.println("Enter the First number : ");
-						String First = sc.nextLine();
-						System.out.println("Enter the Second number : ");
-						String Second = sc.nextLine();
-						if(HexCalc.checkVaildString(First) && HexCalc.checkVaildString(Second))
-						System.out.println("Subtraction is : "+HexCalc.Subtract(First,Second));
-						else
-							System.out.println("Wrong Input..\n");
-						break;
-					}
-				case 3: // Divide 2 hexa no.
-					{
-						System.out.println("Enter the First number : ");
-						String First = sc.nextLine();
-						System.out.println("Enter the Second number : ");
-						String Second = sc.nextLine();
-						if(HexCalc.checkVaildString(First) && HexCalc.checkVaildString(Second))
-						System.out.println("Division is : "+HexCalc.Divide(First,Second));
-						else
-							System.out.println("Wrong Input..\n");
-						
-						break;
-					}
-				case 4: // Multiply 2 hexa no.
-					{
-						System.out.println("Enter the First number : ");
-						String First = sc.nextLine();
-						System.out.println("Enter the Second number : ");
-						String Second = sc.nextLine();
-						if(HexCalc.checkVaildString(First) && HexCalc.checkVaildString(Second))
-						System.out.println("Multiplication is : "+HexCalc.Multiply(First,Second));
-						else
-							System.out.println("Wrong Input..\n");
-						
-						break;
-					}
-				case 5: // Hexa to deci
-					{
-						System.out.println("Enter the Hexa Decimal number : ");
-						String hex=sc.nextLine();
-						if(HexCalc.checkVaildString(hex))
-						System.out.println("Hexa Decimal representation : "+HexCalc.Hex_to_deci(hex));
-						else
-							System.out.println("Wrong Input..\n");
-						break;
-					}
-				case 6: // Deci to hexa
-					{
-						System.out.println("Enter the Decimal number : ");
-						int deci = Integer.parseInt(sc.nextLine());
-						System.out.println("Hexa Decimal representation : "+HexCalc.Deci_to_hex(deci));
-						break;
-					}
-				case 7: // Compare two hexa
-					{
-						System.out.println("Enter the First number : ");
-						String First = sc.nextLine();
-						System.out.println("Enter the Second number : ");
-						String Second= sc.nextLine();
-						if(HexCalc.checkVaildString(First) && HexCalc.checkVaildString(Second))
-						{	
-						if(F_gt_S(First,Second))
-						{
-							System.out.println(First+" > "+Second);
-						}
-						
-						else if(F_lt_S(First,Second))
-						{
-							System.out.println(First+" < "+Second);
-						}
-						
-						else
-						{
-							System.out.println(First+" Equals to "+Second);
-						}
-						}
-						else
-							System.out.println("Wrong Input...\n");
-						break;
-					}
-				case 8: // Quit
-					{
-						System.out.println("Are you sure you want to exit program :(y/n)");
-						String choice=sc.nextLine();
-						if(choice.equalsIgnoreCase("y"))
-						{
-							System.out.println("Exit Successful");
-							System.exit(0);
-						}
-						
-						else if(choice.equalsIgnoreCase("n"))
-						{
-							System.out.println("OK you can continue...\n");
-						}
-						
-						else
-						{
-							System.out.println("Wrong input...\n");
-						}
-						
-						break;
-					}
-				default:
-					{
-						System.out.println("Sorry!!,this option is not mentioned in the above menu \n Please try again\n");
-						break;
-					}
-			
-			}
-			
-			
-			
-			
-		//	sc.close();	
-		}
-		
-		
-	}
-	
-	public static void Choose_option()
+	/*
+	 * auther: kunal kaushik
+	 * desc: This function represents a set of options the user can choice as per needs
+	 * params: Not Needed
+	 * returnType: void
+	 */
+	public static void showOption()
 	{
 		System.out.println("Choose an option from given below : ");
 		System.out.println("1. Add two Hexa Decimal numbers.");
@@ -176,8 +23,14 @@ public class HexCalc {
 		System.out.println("7. Compare the two Hexa Decimal numbers.");
 		System.out.println("8. Exit Program.");
 	}
-
-	public static int Hex_to_deci(String hex)
+	
+	/*
+	 * auther: kunal kaushik
+	 * desc: This function can convert hexaDecimal number to decimal number
+	 * params: single String Input
+	 * returnType: int i.e,decimal equivalent
+	 */
+	public static int hexToDeci(String hex)
 	{
 		int deci=0;
 		char ch;
@@ -195,100 +48,161 @@ public class HexCalc {
 		return deci;
 	}
 	
-	public static String Deci_to_hex(int deci)
+	/*
+	 * auther: kunal kaushik
+	 * desc: This function can convert Decimal number to hexaDecimal number
+	 * params: single int Input
+	 * returnType: int i.e,HexaDecimal equivalent
+	 */
+	public static String deciToHex(int deci)
 	{
 		String hex="";
 		int base=16;
 		Integer rem;
-		
+
 		while(deci>0)
 		{
 			rem=deci%base;
 			if(rem<10)
-			hex = rem.toString() + hex;
+				hex = rem.toString() + hex;
 			else if(rem>=10 && rem<=15)
-			hex= (((char)(rem+55))+"").toString()+hex;
+				hex= (((char)(rem+55))+"").toString()+hex;
 			deci=deci/base;
 		}
-		
+
 		return hex;
 	}
 	
-	public static String Add(String First,String Second)
+	/*
+	 * auther: kunal kaushik
+	 * desc: This function adds two hexaDecimal number 
+	 * params: Two String parameters required,i.e,the numbers to be added
+	 * returnType: String i.e,output of Addition in hexadecimal
+	 */
+	public static String Add(String first,String second)
 	{
-		int f=HexCalc.Hex_to_deci(First);
-		int s=HexCalc.Hex_to_deci(Second);
-		return HexCalc.Deci_to_hex(f+s);
+		int f=HexCalc.hexToDeci(first);
+		int s=HexCalc.hexToDeci(second);
+		return HexCalc.deciToHex(f+s);
 	}
 	
-	public static String Subtract(String First,String Second)
+	/*
+	 * auther: kunal kaushik
+	 * desc: This function subtracts two hexaDecimal number 
+	 * params: Two String parameters required,i.e,the numbers to be subtracted
+	 * returnType: String i.e,output of Subtraction in hexadecimal
+	 *
+	 */
+	public static String Subtract(String first,String second)
 	{
-		int f=HexCalc.Hex_to_deci(First);
-		int s=HexCalc.Hex_to_deci(Second);
+		int f=HexCalc.hexToDeci(first);
+		int s=HexCalc.hexToDeci(second);
 		if(f>s)
-			return HexCalc.Deci_to_hex(f-s);
+			return HexCalc.deciToHex(f-s);
 		else
-			return HexCalc.Deci_to_hex(s-f);	
+			return HexCalc.deciToHex(s-f);	
 	}
 	
-	public static String Divide(String First,String Second)
+	/*
+	 * auther: kunal kaushik
+	 * desc: This function performs division of two hexaDecimal number 
+	 * params: Two String parameters required,i.e,the numbers who participates in division
+	 * returnType: String i.e,output of division in hexadecimal
+	 * Note: division is performed as (first/second),where first and second are the parameters shown below
+	 */
+	public static String Divide(String first,String second)
 	{
-		int f=HexCalc.Hex_to_deci(First);
-		int s=HexCalc.Hex_to_deci(Second);
+		int f=HexCalc.hexToDeci(first);
+		int s=HexCalc.hexToDeci(second);
 		if(f/s>0)
-		return HexCalc.Deci_to_hex(f/s)+" ,remainder is "+f%s;
+			return HexCalc.deciToHex(f/s)+" ,remainder is "+f%s;
 		else
-			return "0 ,remainder is "+First;
+			return "0 ,remainder is "+first;
 	}
 	
-	public static String Multiply(String First,String Second)
+	/*
+	 * auther: kunal kaushik
+	 * desc: This function multiply two hexaDecimal number 
+	 * params: Two String parameters required,i.e,the numbers to be multiplied
+	 * returnType: String i.e,output of multiplication in hexadecimal
+	 */
+	public static String Multiply(String first,String second)
 	{
 
-		int f=HexCalc.Hex_to_deci(First);
-		int s=HexCalc.Hex_to_deci(Second);
-		return HexCalc.Deci_to_hex(f*s);
-		
-	}
-	public static boolean F_gt_S( String First,String Second) // Check First > Second
-	{
-		
-	if(First.length() > Second.length())
-		return true;
-	for(int index=0;index<First.length();index++)
-	{
-		if(First.charAt(index)>Second.charAt(index))
-		{
-			return true;
-		}
-	}
-	return false;
-	
+		int f=HexCalc.hexToDeci(first);
+		int s=HexCalc.hexToDeci(second);
+		return HexCalc.deciToHex(f*s);
+
 	}
 
-	public static boolean F_lt_S( String First,String Second) // Check First > Second
+	/*
+	 * auther: kunal kaushik
+	 * desc: This function Compares two hexaDecimal Strings  
+	 * params: Two String parameters required,i.e,the numbers to be compared
+	 * returnType: boolean value,i.e; if first > second return true else false
+	 *             where first and second are params
+	 */
+	public static boolean firstGreaterThenSecond( String first,String second) // Check first > second
 	{
-		
-	if(First.length() < Second.length())
-		return true;
-	for(int index=0;index<Second.length();index++)
-	{
-		if(First.charAt(index)<Second.charAt(index))
-		{
+
+		if(first.length() > second.length())
 			return true;
+		for(int index=0;index<first.length();index++)
+		{
+			if(first.charAt(index)>second.charAt(index))
+			{
+				return true;
+			}
 		}
+		return false;
+
 	}
-	return false;
-	
-	}
-	
-	public static boolean F_eq_S(String First,String Second)//check First no is equal to secnod or not
+
+	/*
+	 * auther: kunal kaushik
+	 * desc: This function Compares two hexaDecimal Strings  
+	 * params: Two String parameters required,i.e,the numbers to be compared
+	 * returnType: boolean value,i.e; if first < second return true else false
+	 *             where first and second are params
+	 */
+	public static boolean firstLessThenSecond( String first,String second) // Check first > second
 	{
-		if(First.equalsIgnoreCase(Second))
+
+		if(first.length() < second.length())
+			return true;
+		for(int index=0;index<second.length();index++)
+		{
+			if(first.charAt(index)<second.charAt(index))
+			{
+				return true;
+			}
+		}
+		return false;
+
+	}
+
+	/*
+	 * auther: kunal kaushik
+	 * desc: This function Compares two hexaDecimal Strings  
+	 * params: Two String parameters required,i.e,the numbers to be compared
+	 * returnType: boolean value,i.e; if first = second return true else false
+	 *             where first and second are params
+	 */
+	public static boolean firstEqualsToSecond(String first,String second)//check first no is equal to secnod or not
+	{
+		if(first.equalsIgnoreCase(second))
 			return true;
 		else
 			return false;
 	}
-	
+
+	/*
+	 * auther: kunal kaushik
+	 * desc: This function validates whether a string is hexaDecimal or not  
+	 * params: Single String parameters required
+	 * returnType: boolean value,i.e; if String is hexaDecimal returns true
+	 *             else return false
+	 */
 	public static boolean checkVaildString(String string) //Check whether input string is valid Hexa Decimal String or not.
 	{
 		for(int index=0;index<string.length();index++)
@@ -302,5 +216,5 @@ public class HexCalc {
 		}
 		return true;
 	}
-	
+
 }
