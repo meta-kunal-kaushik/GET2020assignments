@@ -1,15 +1,15 @@
-/*
+/**
  * @author ${kunal kaushik}
- * desc : This class can implement addition,subtraction,multiplication and division of hexaDecimal numbers
+ * @desc : This class can implement addition,subtraction,multiplication and division of hexaDecimal numbers
  * Also includes functions to change hexaDecimal to Decimal and vice-versa
  * 
  */
 public class HexCalc {
-	/*
-	 * auther: kunal kaushik
-	 * desc: This function represents a set of options the user can choice as per needs
-	 * params: Not Needed
-	 * returnType: void
+	/**
+	 * @author: kunal kaushik
+	 * @desc: This function represents a set of options the user can choice as per needs
+	 * @params: Not Needed
+	 * @return: void
 	 */
 	public static void showOption()
 	{
@@ -24,11 +24,11 @@ public class HexCalc {
 		System.out.println("8. Exit Program.");
 	}
 	
-	/*
-	 * auther: kunal kaushik
-	 * desc: This function can convert hexaDecimal number to decimal number
-	 * params: single String Input
-	 * returnType: int i.e,decimal equivalent
+	/**
+	 * @author: kunal kaushik
+	 * @desc: This function can convert hexaDecimal number to decimal number
+	 * @params: single String Input
+	 * @return: int i.e,decimal equivalent
 	 */
 	public static int hexToDeci(String hex)
 	{
@@ -48,11 +48,11 @@ public class HexCalc {
 		return deci;
 	}
 	
-	/*
-	 * auther: kunal kaushik
-	 * desc: This function can convert Decimal number to hexaDecimal number
-	 * params: single int Input
-	 * returnType: int i.e,HexaDecimal equivalent
+	/**
+	 * @author: kunal kaushik
+	 * @desc: This function can convert Decimal number to hexaDecimal number
+	 * @params: single int Input
+	 * @return: int i.e,HexaDecimal equivalent
 	 */
 	public static String deciToHex(int deci)
 	{
@@ -73,11 +73,11 @@ public class HexCalc {
 		return hex;
 	}
 	
-	/*
-	 * auther: kunal kaushik
-	 * desc: This function adds two hexaDecimal number 
-	 * params: Two String parameters required,i.e,the numbers to be added
-	 * returnType: String i.e,output of Addition in hexadecimal
+	/**
+	 * @author: kunal kaushik
+	 * @desc: This function adds two hexaDecimal number 
+	 * @params: Two String parameters required,i.e,the numbers to be added
+	 * @return: String i.e,output of Addition in hexadecimal
 	 */
 	public static String Add(String first,String second)
 	{
@@ -86,11 +86,11 @@ public class HexCalc {
 		return HexCalc.deciToHex(f+s);
 	}
 	
-	/*
-	 * auther: kunal kaushik
-	 * desc: This function subtracts two hexaDecimal number 
-	 * params: Two String parameters required,i.e,the numbers to be subtracted
-	 * returnType: String i.e,output of Subtraction in hexadecimal
+	/**
+	 * @author: kunal kaushik
+	 * @desc: This function subtracts two hexaDecimal number 
+	 * @params: Two String parameters required,i.e,the numbers to be subtracted
+	 * @return: String i.e,output of Subtraction in hexadecimal
 	 *
 	 */
 	public static String Subtract(String first,String second)
@@ -103,11 +103,11 @@ public class HexCalc {
 			return HexCalc.deciToHex(s-f);	
 	}
 	
-	/*
-	 * auther: kunal kaushik
-	 * desc: This function performs division of two hexaDecimal number 
-	 * params: Two String parameters required,i.e,the numbers who participates in division
-	 * returnType: String i.e,output of division in hexadecimal
+	/**
+	 * @author: kunal kaushik
+	 * @desc: This function performs division of two hexaDecimal number 
+	 * @params: Two String parameters required,i.e,the numbers who participates in division
+	 * @return: String i.e,output of division in hexadecimal
 	 * Note: division is performed as (first/second),where first and second are the parameters shown below
 	 */
 	public static String Divide(String first,String second)
@@ -120,11 +120,11 @@ public class HexCalc {
 			return "0 ,remainder is "+first;
 	}
 	
-	/*
-	 * auther: kunal kaushik
-	 * desc: This function multiply two hexaDecimal number 
-	 * params: Two String parameters required,i.e,the numbers to be multiplied
-	 * returnType: String i.e,output of multiplication in hexadecimal
+	/**
+	 * @author: kunal kaushik
+	 * @desc: This function multiply two hexaDecimal number 
+	 * @params: Two String parameters required,i.e,the numbers to be multiplied
+	 * @return: String i.e,output of multiplication in hexadecimal
 	 */
 	public static String Multiply(String first,String second)
 	{
@@ -135,12 +135,12 @@ public class HexCalc {
 
 	}
 
-	/*
-	 * auther: kunal kaushik
-	 * desc: This function Compares two hexaDecimal Strings  
-	 * params: Two String parameters required,i.e,the numbers to be compared
-	 * returnType: boolean value,i.e; if first > second return true else false
-	 *             where first and second are params
+	/**
+	 * @author: kunal kaushik
+	 * @desc: This function Compares two hexaDecimal Strings  
+	 * @params: Two String parameters required,i.e,the numbers to be compared
+	 * @return: boolean value,i.e; if first > second return true else false
+	 *             where first and second are @params
 	 */
 	public static boolean firstGreaterThenSecond( String first,String second) // Check first > second
 	{
@@ -158,12 +158,12 @@ public class HexCalc {
 
 	}
 
-	/*
-	 * auther: kunal kaushik
-	 * desc: This function Compares two hexaDecimal Strings  
-	 * params: Two String parameters required,i.e,the numbers to be compared
-	 * returnType: boolean value,i.e; if first < second return true else false
-	 *             where first and second are params
+	/**
+	 * @author: kunal kaushik
+	 * @desc: This function Compares two hexaDecimal Strings  
+	 * @params: Two String parameters required,i.e,the numbers to be compared
+	 * @return: boolean value,i.e; if first < second return true else false
+	 *             where first and second are @params
 	 */
 	public static boolean firstLessThenSecond( String first,String second) // Check first > second
 	{
@@ -181,12 +181,12 @@ public class HexCalc {
 
 	}
 
-	/*
-	 * auther: kunal kaushik
-	 * desc: This function Compares two hexaDecimal Strings  
-	 * params: Two String parameters required,i.e,the numbers to be compared
-	 * returnType: boolean value,i.e; if first = second return true else false
-	 *             where first and second are params
+	/**
+	 * @author: kunal kaushik
+	 * @desc: This function Compares two hexaDecimal Strings  
+	 * @params: Two String parameters required,i.e,the numbers to be compared
+	 * @return: boolean value,i.e; if first = second return true else false
+	 *             where first and second are @params
 	 */
 	public static boolean firstEqualsToSecond(String first,String second)//check first no is equal to secnod or not
 	{
@@ -196,11 +196,11 @@ public class HexCalc {
 			return false;
 	}
 
-	/*
-	 * auther: kunal kaushik
-	 * desc: This function validates whether a string is hexaDecimal or not  
-	 * params: Single String parameters required
-	 * returnType: boolean value,i.e; if String is hexaDecimal returns true
+	/**
+	 * @author: kunal kaushik
+	 * @desc: This function validates whether a string is hexaDecimal or not  
+	 * @params: Single String parameters required
+	 * @return: boolean value,i.e; if String is hexaDecimal returns true
 	 *             else return false
 	 */
 	public static boolean checkVaildString(String string) //Check whether input string is valid Hexa Decimal String or not.

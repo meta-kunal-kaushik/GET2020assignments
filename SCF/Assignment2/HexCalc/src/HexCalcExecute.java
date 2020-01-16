@@ -1,8 +1,8 @@
 import java.util.Scanner;
 
-/*
- * auther : kunal kaushik
- * desc   : Class HexCalcExecute uses the functions which are  predefined in class HexCalc
+/**
+ * @author Kunal kaushik
+ * @desc   : Class HexCalcExecute uses the functions which are  predefined in class HexCalc
  * to perform different operations on hexaDecimal numbers
  */
 public class HexCalcExecute {
