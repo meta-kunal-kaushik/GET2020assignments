@@ -23,34 +23,34 @@ public class StringOperationExecute {
 		case 1: { // compare two strings
 			System.out.println("Enter first string : ");
 			sc.nextLine();
-			String s1 = sc.nextLine();
+			String str1 = sc.nextLine();
 
 			System.out.println("Enter second string : ");
-			String s2 = sc.nextLine();
+			String str2 = sc.nextLine();
 			System.out.println("Result : "
-					+ StringOperations.compareStrings(s1, s2));
+					+ StringOperations.compareStrings(str1, str2));
 			break;
 		}
 		case 2: { // reverse a string
 			System.out.println("Enter the string : ");
 			sc.nextLine();
-			String s = sc.nextLine();
-			System.out.println("Result : " + StringOperations.reverseString(s));
+			String str = sc.nextLine();
+			System.out.println("Result : " + StringOperations.reverseString(str));
 			break;
 		}
 		case 3: { // change cases of each alphabet in the string
 			System.out.println("Enter the string : ");
 			sc.nextLine();
-			String s = sc.nextLine();
-			System.out.println("Result : " + StringOperations.changeCase(s));
+			String str = sc.nextLine();
+			System.out.println("Result : " + StringOperations.changeCase(str));
 			break;
 		}
 		case 4: { // find the largest word in the string
 			System.out.println("Enter the string : ");
 			sc.nextLine();
-			String s = sc.nextLine();
+			String str = sc.nextLine();
 			System.out.println("largest string : "
-					+ StringOperations.largestWord(s));
+					+ StringOperations.largestWord(str));
 			break;
 		}
 		case 5: { // Quit program

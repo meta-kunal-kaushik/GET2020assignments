@@ -6,19 +6,19 @@
 public class StringOperations {
 /**
  * 
- * @param s1
- * @param s2
+ * @param str1
+ * @param str2
  * @return 1 if strings are equal else 0
  */
-	public static int compareStrings(String s1,String s2)
+	public static int compareStrings(String str1,String str2)
 	{
 		int returnVal = 1; 
-		if(s1.length() != s2.length())
+		if(str1.length() != str2.length())
 			returnVal = 0;
 		else
-	{		for(int index = 0 ; index < s1.length() ; index++ )
+	{		for(int index = 0 ; index < str1.length() ; index++ )
 				{
-				if( s1.charAt(index) != s2.charAt(index) )
+				if( str1.charAt(index) != str2.charAt(index) )
 				{
 					returnVal = 0;
 					break;
@@ -29,37 +29,36 @@ public class StringOperations {
 	}
 	/**
 	 * 
-	 * @param s
+	 * @param str
 	 * @return reverse of the string passes as arguement
 	 */
-	public static String reverseString(String s)
+	public static String reverseString(String str)
 	{
-		String str = ""; // this var stores the reverse string
-		char[] ch = new char[s.length()];
-		   for ( int index=s.length()-1 ; index >= 0 ; index-- ){
-		       ch[index] = s.charAt(s.length()-index-1);
+		String string = ""; // this var stores the reverse string
+		char[] ch = new char[str.length()];
+		   for ( int index=str.length()-1 ; index >= 0 ; index-- ){
+		       ch[index] = str.charAt(str.length()-index-1);
 		   }
-		for( int index=0 ; index < s.length() ; index++ )
+		for( int index=0 ; index < str.length() ; index++ )
 		{
-		str = str + Character.toString(ch[index]);
+		string = string + Character.toString(ch[index]);
 		}
-		return str;
+		return string;
 	}
 /**
  * 
- * @param s
+ * @param str
  * @return changes the case of each alphabet in the string and then returns the result
  */
-	public static String changeCase(String s)
+	public static String changeCase(String str)
 	{
-		String str = ""; // this variable contains the string after changing case of alphabets
-		char[] ch = new char[s.length()];
-		   for ( int i = 0 ; i < s.length() ; i++ ){ // string into char array
-		       ch[i] = s.charAt(i);
+		String string = ""; // this variable contains the string after changing case of alphabets
+		char[] ch = new char[str.length()];
+		for ( int i = 0 ; i < str.length() ; i++ ) { // string into char array
+		       ch[i] = str.charAt(i);
 		   }
 		   
-		for( int index = 0; index < s.length() ; index++ )
-		{
+		for( int index = 0; index < str.length() ; index++ ){
 			if( ch[index] >= 'a' && ch[index] <= 'z')
 			{
 				ch[index] = (char)((int)ch[index] - 32);
@@ -68,9 +67,9 @@ public class StringOperations {
 			{
 				ch[index] = (char)((int)ch[index] + 32);
 			}
-		str = str + Character.toString(ch[index]);
+		string = string + Character.toString(ch[index]);
 		}
-	return str;
+	return string;
 	}	
 /**
  * 
