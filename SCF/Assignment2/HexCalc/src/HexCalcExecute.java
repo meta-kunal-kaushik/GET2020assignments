@@ -12,8 +12,15 @@ public class HexCalcExecute {
 		int option; // this variable is to ask the user about what operation
 					// they want to perform
 		while (true) {
-
-			HexCalc.showOption();// this function displays the list of operations that can be performed on hexaDecimal numbers
+			System.out.println("Choose an option from given below : ");
+			System.out.println("1. Add two Hexa Decimal numbers.");
+			System.out.println("2. Subtract two Hexa Decimal numbers.");
+			System.out.println("3. Divide two Hexa Decimal numbers.");
+			System.out.println("4. Multiply two Hexa Decimal numbers.");
+			System.out.println("5. Convert Hexa Decimal to Decimal number.");
+			System.out.println("6. Convert Decimal to Hexa Decimal number.");
+			System.out.println("7. Compare the two Hexa Decimal numbers.");
+			System.out.println("8. Exit Program.");
 			try {
 				option = Integer.parseInt(sc.nextLine());
 			} catch (NumberFormatException e) // IF input is not a number
@@ -24,8 +31,7 @@ public class HexCalcExecute {
 			}
 			switch (option) {
 
-			case 1: // Addition of two hexaDecimal numbers
-			{
+			case 1: { // Addition of two hexaDecimal numbers
 				System.out.println("Enter the first number : ");
 				String first = sc.nextLine(); // Input first hexaDecimal String
 				System.out.println("Enter the second number : ");
@@ -35,13 +41,12 @@ public class HexCalcExecute {
 				if (HexCalc.checkVaildString(first)
 						&& HexCalc.checkVaildString(second))
 					System.out.println("Addition is : "
-							+ HexCalc.Add(first, second));
+							+ HexCalc.add(first, second));
 				else
 					System.out.println("Wrong Input..\n");
 				break;
 			}
-			case 2: // Subtraction of two hexaDecimal numbers
-			{
+			case 2: { // Subtraction of two hexaDecimal numbers
 				System.out.println("Enter the first number : ");
 				String first = sc.nextLine(); // Input first hexaDecimal String
 				System.out.println("Enter the second number : ");
@@ -49,13 +54,12 @@ public class HexCalcExecute {
 				if (HexCalc.checkVaildString(first) //string validation,i.e;hexaDecimal or not
 						&& HexCalc.checkVaildString(second))
 					System.out.println("Subtraction is : "
-							+ HexCalc.Subtract(first, second));
+							+ HexCalc.subtract(first, second));
 				else
 					System.out.println("Wrong Input..\n");
 				break;
 			}
-			case 3: // Division of two hexaDecimal numbers
-			{
+			case 3: { // Division of two hexaDecimal numbers
 				System.out.println("Enter the first number : ");
 				String first = sc.nextLine(); // Input first hexaDecimal String
 				System.out.println("Enter the second number : ");
@@ -63,14 +67,13 @@ public class HexCalcExecute {
 				if (HexCalc.checkVaildString(first)
 						&& HexCalc.checkVaildString(second)) //string validation,i.e;hexaDecimal or not
 					System.out.println("Division is : "
-							+ HexCalc.Divide(first, second));
+							+ HexCalc.divide(first, second));
 				else
 					System.out.println("Wrong Input..\n");
 
 				break;
 			}
-			case 4: // Multiplication of two hexaDecimal numbers
-			{
+			case 4: { // Multiplication of two hexaDecimal numbers
 				System.out.println("Enter the first number : ");
 				String first = sc.nextLine(); // Input first hexaDecimal String
 				System.out.println("Enter the second number : ");
@@ -78,14 +81,13 @@ public class HexCalcExecute {
 				if (HexCalc.checkVaildString(first) //string validation,i.e;hexaDecimal or not
 						&& HexCalc.checkVaildString(second))
 					System.out.println("Multiplication is : "
-							+ HexCalc.Multiply(first, second));
+							+ HexCalc.multiply(first, second));
 				else
 					System.out.println("Wrong Input..\n");
 
 				break;
 			}
-			case 5: // convert HexaDecimal number to decimal number
-			{
+			case 5: { // convert HexaDecimal number to decimal number
 				System.out.println("Enter the Hexa Decimal number : ");
 				String hex = sc.nextLine(); // Input first hexaDecimal String
 				if (HexCalc.checkVaildString(hex)) //string validation,i.e;hexaDecimal or not
@@ -95,21 +97,19 @@ public class HexCalcExecute {
 					System.out.println("Wrong Input..\n");
 				break;
 			}
-			case 6: // convert Decimal number to hexaDecimal number
-			{
+			case 6: { // convert Decimal number to hexaDecimal number
 				System.out.println("Enter the Decimal number : ");
 				int deci = Integer.parseInt(sc.nextLine()); 
 				System.out.println("Hexa Decimal representation : "
 						+ HexCalc.deciToHex(deci));
 				break;
 			}
-			case 7: // Compare whether two hexaDecimal String are equal,greater than or less than one another
-			{
+			case 7: {  // Compare whether two hexaDecimal String are equal,greater than or less than one another
 				System.out.println("Enter the first number : ");
 				String first = sc.nextLine();
 				System.out.println("Enter the second number : ");
 				String second = sc.nextLine();
-				if (HexCalc.checkVaildString(first) //string validation,i.e;hexaDecimal or not
+				if (HexCalc.checkVaildString(first) // string validation,i.e;hexaDecimal or not
 						&& HexCalc.checkVaildString(second)) {
 					if (HexCalc.firstGreaterThenSecond(first, second)) {
 						System.out.println(first + " > " + second);
@@ -126,8 +126,7 @@ public class HexCalcExecute {
 					System.out.println("Wrong Input...\n");
 				break;
 			}
-			case 8: // Quit program
-			{
+			case 8: { // Quit program
 				System.out
 						.println("Are you sure you want to exit program :(y/n)");
 				String choice = sc.nextLine();
@@ -155,4 +154,5 @@ public class HexCalcExecute {
 			}
 		}
 	}
+
 }
