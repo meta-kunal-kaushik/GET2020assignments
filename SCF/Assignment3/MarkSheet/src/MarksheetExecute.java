@@ -9,16 +9,16 @@ public class MarksheetExecute {
 	private static Scanner sc = new Scanner(System.in);
 
 	public static void main(String args[]) throws Exception {
-		Marksheet m = new Marksheet();
+		Marksheet marksheet = new Marksheet();
 		System.out.println("Enter the number of students : ");
 		int size = sc.nextInt(); // no. of students
 		float grade[] = new float[size];
 try {
 	
 
-		for (int i = 0; i < size; i++) { // input grades per student
-			System.out.println("Grade of std[" + i + "] : ");
-			grade[i] = sc.nextInt();
+		for (int index = 0; index < size; index++) { // input grades per student
+			System.out.println("Grade of std[" + index + "] : ");
+			grade[index] = sc.nextInt();
 		}
 
 		while(true) {
@@ -34,20 +34,20 @@ try {
 			switch (option) {
 			case 1: { //find average of all grades
 				System.out.printf("Average of Grades : %.2f\n",
-						m.average(grade, grade.length));
+						marksheet.average(grade, grade.length));
 				break;
 			}
 			case 2: { //find the maximum grade
-				System.out.printf("Maximum Grade : %.2f\n", m.maxGrade(grade));
+				System.out.printf("Maximum Grade : %.2f\n", marksheet.maxGrade(grade));
 				break;
 			}
 			case 3: { //find the minimum grade
-				System.out.printf("Minimum Grade : %.2f\n", m.minGrade(grade));
+				System.out.printf("Minimum Grade : %.2f\n", marksheet.minGrade(grade));
 				break;
 			}
 			case 4: { //find the students who passed the exam 
 				System.out.printf("Percentage of std. passed : %.2f\n",
-						m.percentStudentPass(grade, grade.length));
+						marksheet.percentStudentPass(grade, grade.length));
 				break;
 			}
 			case 5: { //Quit program

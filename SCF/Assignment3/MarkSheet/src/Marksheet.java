@@ -7,62 +7,62 @@
  */
 public class Marksheet {
 	/**
-	 * @param grades
-	 * @param n
-	 * @return average of the student
+	 * @param grades , float type array
+	 * @param arraySize ,int type
+	 * @return average of the student , float type
 	 * @throws Exception
 	 */
-	public float average(float[] grades, int n) throws Exception {
-		if (n <= 0) {
+	public float average(float[] grades, int arraySize) throws Exception {
+		if (arraySize <= 0) {
 			throw (new Exception("Exception : divide by zero"));
 		}
 		int sum = 0;
-		for (int i = 0; i < grades.length; i++) {
-			sum += grades[i];
+		for (int index = 0; index < grades.length; index++) {
+			sum += grades[index];
 		}
-		return (sum / n);
+		return (sum / arraySize);
 	}
 
 	/**
-	 * @param grades
-	 * @return max_grade
+	 * @param grades , float type array
+	 * @return max ,float type
 	 */
 	public float maxGrade(float[] grades) {
 		float max = Integer.MIN_VALUE;
-		for (int i = 0; i < grades.length; i++) {
-			if (grades[i] > max) {
-				max = grades[i];
+		for (int index = 0; index < grades.length; index++) {
+			if (grades[index] > max) {
+				max = grades[index];
 			}
 		}
 		return max;
 	}
 
 	/**
-	 * @param grades
-	 * @return min grade
+	 * @param grades , float type array
+	 * @return min ,float type
 	 */
 	public float minGrade(float[] grades) {
 		float min = Integer.MAX_VALUE;
-		for (int i = 0; i < grades.length; i++) {
-			if (grades[i] < min) {
-				min = grades[i];
+		for (int index = 0; index < grades.length; index++) {
+			if (grades[index] < min) {
+				min = grades[index];
 			}
 		}
 		return min;
 	}
 
 	/**
-	 * @param grades
-	 * @param n
+	 * @param grades , float type array
+	 * @param arraySize , int type
 	 * @return percentage of the students
 	 */
-	public float percentStudentPass(float[] grades, int n) {
+	public float percentStudentPass(float[] grades, int arraySize) {
 		float count = 0;
-		for (int i = 0; i < grades.length; i++) {
-			if (grades[i] >= 40)
+		for (int index = 0; index < grades.length; index++) {
+			if (grades[index] >= 40)
 				count++;
 		}
-		float per = ((count / n) * 100);
+		float per = ((count / arraySize) * 100);
 		return per;
 	}
 
