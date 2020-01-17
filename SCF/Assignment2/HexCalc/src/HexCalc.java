@@ -89,7 +89,8 @@ public class HexCalc {
 		int first_ = HexCalc.hexToDeci(first);
 		int second_ = HexCalc.hexToDeci(second);
 		if (first_ / second_ > 0)
-			return HexCalc.deciToHex(first_ / second_) + " ,remainder is " + first_ % second_;
+			return HexCalc.deciToHex(first_ / second_) + " ,remainder is "
+					+ first_ % second_;
 		else
 			return "0 ,remainder is " + first;
 	}
@@ -114,12 +115,12 @@ public class HexCalc {
 	 * @return  boolean value,i.e; if first > second return true else false
 	 */
 	public static boolean firstGreaterThenSecond(String first, String second) {
-boolean returnVal=false;
+		boolean returnVal = false;
 		if (first.length() > second.length())
-			returnVal= true;
+			returnVal = true;
 		for (int index = 0; index < first.length(); index++) {
 			if (first.charAt(index) > second.charAt(index)) {
-				returnVal= true;
+				returnVal = true;
 			}
 		}
 		return returnVal;
@@ -133,12 +134,12 @@ boolean returnVal=false;
 	 * @return  boolean value,i.e; if first < second return true else false
 	 */
 	public static boolean firstLessThenSecond(String first, String second) {
-boolean returnVal = false;
+		boolean returnVal = false;
 		if (first.length() < second.length())
-			returnVal=true;
+			returnVal = true;
 		for (int index = 0; index < second.length(); index++) {
 			if (first.charAt(index) < second.charAt(index)) {
-				returnVal= true;
+				returnVal = true;
 			}
 		}
 		return returnVal;
@@ -152,10 +153,10 @@ boolean returnVal = false;
 	 * @return boolean value,i.e; if first = second return true else false
 	 */
 	public static boolean firstEqualsToSecond(String first, String second) {
-		boolean returnVal =false;
+		boolean returnVal = false;
 		if (first.equalsIgnoreCase(second))
-			returnVal=true;
-return returnVal;
+			returnVal = true;
+		return returnVal;
 	}
 
 	/**

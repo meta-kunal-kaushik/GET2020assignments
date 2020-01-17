@@ -23,12 +23,6 @@ public class HexCalcExecute {
 			System.out.println("8. Exit Program.");
 			try {
 				option = Integer.parseInt(sc.nextLine());
-			} catch (NumberFormatException e) // IF input is not a number
-			{
-				System.out.println("Wrong Input");
-				System.out.println("Please enter your option again : ");
-				option = Integer.parseInt(sc.nextLine());
-			}
 			switch (option) {
 
 			case 1: { // Addition of two hexaDecimal numbers
@@ -153,6 +147,11 @@ public class HexCalcExecute {
 			}
 			}
 		}
+		 catch (NumberFormatException e) // IF input is not a number
+			{
+				System.out.println("Wrong Input");
+			}
+			
 	}
-
+	}
 }
