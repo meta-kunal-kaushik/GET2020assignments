@@ -1,0 +1,32 @@
+* {
+    color: rgba(29, 24, 24, 0.568);
+}
+
+input[type=text],
+input[type=password],
+input[type=submit],
+select {
+    border-radius: 25px;
+    outline: 0;
+    width: 95%;
+    margin: auto;
+    padding: 10;
+}
+
+textarea {
+    width: 95%;
+    height: 30%;
+}
+
+h1 {
+    text-align: center;
+    color: black;
+}
+
+form {
+    width: 600;
+    height: 400;
+    margin: 0 auto;
+    box-shadow: 10px 10px 5px grey;
+    padding: 5;
+}
