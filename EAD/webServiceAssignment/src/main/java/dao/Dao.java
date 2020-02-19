@@ -36,7 +36,7 @@ public class Dao {
 	 * @return Item object
 	 */
 	public Item getItemByName(String name) {
-		String query = "select * from items where name = "+name;
+		String query = "select * from items where name='"+name+"'";
 		Item item = new Item();
 		try {
 			Statement stmt = con.createStatement();
