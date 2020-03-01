@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Assignment1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <a href="#employeeForm">Add Employee</a> |
+        <a href="#vechileForm">Add Vechile</a> |
+        <a href="#feedbackForm">Give Feedback</a> |
+        <a href="#pricingForm">Pricing</a>
+    </nav>
+    <img src="images/background.jpg" width="50%" height="50%">
+    <!-- Employee Form -->
+    <div>
+        <form id="employeeForm">
+            <h1>Employee Details</h1>
+            <input type="text" placeholder="Name"><br>
+            <input type="radio" name="gender"><label>Male</label>
+            <input type="radio" name="gender"><label>Female</label><br>
+            <input type="email" placeholder="Email"><br>
+            <input type="password" placeholder="Password"><br>
+            <input type="password" placeholder="Confirm Password"><br>
+            <input type="text" placeholder="Contact Number"><br>
+            <input type="submit" value="Submit"><br>
+        </form>
+    </div>
+    <!-- Vechile Form -->
+    <div>
+        <form id="vechileForm">
+            <h1>Vechile Details</h1>
+            <input type="text" placeholder="Company"><br>
+            <input type="text" placeholder="Model"><br>
+            <input type="text" placeholder="Type"><br>
+            <input type="text" placeholder="Vechile Number"><br>
+            <input type="text" placeholder="Employee Id"><br>
+            <textarea placeholder="Identification"></textarea><br>
+            <input type="submit" value="Submit"><br>
+        </form>
+    </div>
+    <!-- Feedback Form -->
+    <div>
+        <form id="feedbackForm">
+            <h1>Feedback Details</h1>
+            <input type="text" placeholder="Name"><br>
+            <input type="email" placeholder="Email"><br>
+            <input type="text" placeholder="Subject"><br>
+            <textarea placeholder="Message"></textarea><br>
+            <input type="submit" value="Submit"><br>
+        </form>
+    </div>
+    <!-- Pricing Form -->
+    <div>
+        <form id="pricingForm">
+            <h1>Pricing Details</h1>
+            <div class="inlineBlock">
+                <h2>Cylce Pass</h2>
+                <div class="circle"></div>
+                <label>$5 Daily<br>$100 Monthly <br>$500 Yearly</label><br>
+                <button type="submit">Purchase</button>
+            </div>
+            <div class="inlineBlock">
+                <h2>Bike Pass</h2>
+                <div class="circle"></div>
+                <label>$10 Daily<br>$200 Monthly <br>$1000 Yearly</label><br>
+                <button type="submit">Purchase</button>
+            </div>
+            <div class="inlineBlock">
+                <h2>Car Pass</h2>
+                <div class="circle"></div>
+                <label>$20 Daily<br>$500 Monthly <br>$3500 Yearly</label><br>
+                <button type="submit">Purchase</button>
+            </div>
+
+        </form>
+    </div>
+
+</body>
+
+</html>
