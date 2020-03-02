@@ -1,0 +1,72 @@
+.circle {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    border: 2px solid black;
+}
+
+.inlineBlock {
+    display: inline-block;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+}
+
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.topnav a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+
+/* <details> tag css */
+
+details {
+    margin: 10;
+    padding: 10;
+}
+
+summary {
+    outline: none;
+    border-radius: 20px;
+    background-color: #333;
+    color: white;
+}
+
+input[type=text],
+input[type=password],
+input[type=submit],
+input[type=email],
+select,
+textarea {
+    border-radius: 25px;
+    outline: 0;
+    width: 95%;
+    margin: 10px;
+    padding: 10px;
+    height: 30px;
+}
+
+input[type=radio] {
+    margin-left: 15px;
+}
