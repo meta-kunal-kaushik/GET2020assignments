@@ -1,0 +1,190 @@
+/* css for home page */
+
+body {
+    margin: 0;
+}
+
+.home {
+    background-image: url('../images/homebg.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.logo {
+    height: 20%;
+}
+
+.home-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    margin-left: 5%;
+}
+
+.home-links>section {
+    margin-left: 20%;
+}
+
+.head {
+    flex-direction: row;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    color: white;
+    width: 800px;
+}
+
+.find-us-at-links {
+    flex-direction: row;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: right;
+    color: white;
+    width: 400px;
+}
+
+.box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: white;
+    font-size: 30px;
+}
+
+
+/* css for features page */
+
+.background {
+    background-image: url('../images/bodybg.png');
+}
+
+.row-divide {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.row-divide>div {
+    width: 20%;
+}
+
+.blue {
+    color: cornflowerblue;
+    text-align: center;
+}
+
+.gray {
+    color: gray;
+    text-align: center;
+}
+
+.article-gray {
+    color: gray;
+}
+
+.feature-image {
+    display: flex;
+    justify-content: center;
+}
+
+
+/* Screenshot page css */
+
+.screenshot {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.screenshot-rightbox {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20%;
+}
+
+.cloud {
+    width: 10%;
+    margin-left: 10%;
+}
+
+.screenshot-article {
+    width: 50%;
+    margin-left: 10%;
+}
+
+.screenshot-image {
+    margin-top: 10%;
+}
+
+.screenshot-heading {
+    margin-left: 10%;
+    color: black;
+}
+
+.reviews-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.reviews-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.reviews-col>article {
+    width: 60%;
+    color: black;
+    font-weight: bold;
+    margin: 5%;
+}
+
+
+/* css for download page */
+
+.download {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.download-app {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 5%;
+}
+
+.blue-background {
+    background-color: royalblue;
+    opacity: 0.8;
+    color: white;
+}
+
+.download-image {
+    height: 100px;
+    justify-content: right;
+}
+
+.download>div {
+    width: 30%;
+}
+
+.download>img {
+    align-items: flex-end;
+    height: 200px;
+}
+
+.blue-quotes {
+    color: cornflowerblue;
+}
+
+.white {
+    color: white;
+    justify-content: right;
+}
