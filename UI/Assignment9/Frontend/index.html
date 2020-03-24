@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Assignment 7</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<script src="script.js"></script>
+
+<body>
+    <!-- This form is about Employee details -->
+    <form id="form1">
+        <div class="heading">Employee Detail Form</div>
+        <div id="message" class="message"> </div>
+
+        <div id="username">
+            <input type="text" placeholder="*username" id="name">
+            <input type="button" value="Next" onclick="hideMe('username')">
+        </div>
+        <div id="gender" style="display: none;">
+            <label>male <input type="radio" name="gender" id="male"></label>
+            <label>female <input type="radio" name="gender" id="female"></label>
+            <input type="button" value="Next" onclick="hideMe('gender')">
+        </div>
+        <div id="email" style="display: none;">
+            <input type="email" placeholder="*email" id="emailId">
+            <input type="button" value="Next" onclick="hideMe('email')">
+        </div>
+        <div id="password" style="display: none;">
+            <input type="password" placeholder="*password" id="pass" onkeyup="passwordStrength()">
+            <input type="button" value="Next" onclick="hideMe('password')">
+        </div>
+        <div id="confirmPassword" style="display: none;">
+            <input type="password" placeholder="*confirm password" id="confirmPass">
+            <input type="button" value="Next" onclick="hideMe('confirmPassword')">
+        </div>
+        <div id="contactNo" style="display: none;">
+            <input type="text" placeholder="*contact number" id="contact">
+            <input type="button" value="Next" onclick="hideMe('contactNo')">
+        </div>
+    </form>
+    <!-- This form is about vehicle details -->
+    <form id="form2" style="display: none;">
+        <div class="heading">Add Vehicle Form</div>
+        <div class="message" id="message1"></div>
+        <div id='vehicleName'>
+            <input type="text" id='VehicleName' placeholder="Vehicle Name">
+            <input type="button" value="Next" onclick="hideMe('vehicleName')">
+        </div>
+        <div id='vehicleType' style="display: none;">
+            <input type="text" id='VehicleType' placeholder="Vehicle Type">
+            <input type="button" value="Next" onclick="hideMe('vehicleType')">
+        </div>
+        <div id="idOfEmp" style="display: none;">
+            <input type="text" id='empId' readonly on>
+            <input type="button" value="Next" onclick="hideMe('idOfEmp')">
+        </div>
+        <div id="typeOfVehicle" style="display: none;">
+            <label>Vechile Type :</label>
+            <select name="vehcile" id="TypeOfVehicle">   
+                <option value="car">Car</option>
+                <option value="bike">Bike</option>
+                <option value="cycle">Bicycle</option>
+                </select>
+            <input type="button" value="Next" onclick="hideMe('typeOfVehicle')">
+        </div>
+        <div id="description" style="display: none;">
+            <textarea placeholder="description about vehicle"></textarea>
+            <input type="button" value="Next" onclick="hideMe('description')">
+        </div>
+    </form>
+    <!-- This form is about the pass prices -->
+    <form id="form3" style="display: none;">
+        <div class="heading">Choose Pass Type</div>
+        <div class="message" id="message2"></div>
+        <div id="currency">
+            <label>currency :</label>
+            <select name="currency" id="TypeOfCurrency" onchange="showPrices()">   
+            <option value="none" selected>Choose</option>
+            <option value="rupees">Rupees</option>
+            <option value="usd">USD</option>
+            <option value="yen">Yen</option>
+            </select>
+        </div>
+        <div id="priceCatalog"></div>
+    </form>
+</body>
+
+</html>
