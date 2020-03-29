@@ -1,0 +1,55 @@
+#newTaskDiv {
+    background-color: darkgray;
+    margin-left: 5%;
+    border-radius: 4rem;
+}
+
+#inProcessTaskDiv {
+    background-color: darkgray;
+    margin-right: 2%;
+    margin-left: 2%;
+    border-radius: 4rem;
+}
+
+#completedTaskDiv {
+    background-color: darkgray;
+    margin-right: 5%;
+    border-radius: 4rem;
+}
+
+#bottom {
+    display: inline-block;
+    width: 100%;
+}
+
+.divs {
+    padding-top: 1%;
+    float: left;
+    text-align: center;
+    width: 28%;
+    height: 500px;
+}
+
+#taskDiv {
+    margin-top: 10%;
+}
+
+a {
+    color: black;
+}
+
+#High {
+    background-color: red;
+}
+
+#Low {
+    background-color: orange;
+}
+
+#Medium {
+    background-color: blue;
+}
+
+a {
+    text-decoration: none;
+}
